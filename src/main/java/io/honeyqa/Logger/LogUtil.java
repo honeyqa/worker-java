@@ -2,7 +2,7 @@
  * Created by minwoojung
  */
 
-package io.honeyqa.Logger;
+package io.honeyqa.logger;
 
 public final class LogUtil {
 

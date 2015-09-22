@@ -1,4 +1,4 @@
-package io.honeyqa.Router;
+package io.honeyqa.router;
 
 public interface RoutingDirector {
 
