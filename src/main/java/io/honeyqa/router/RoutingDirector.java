@@ -10,4 +10,6 @@ public interface RoutingDirector {
 
     public abstract void RedisRouter();
 
+    public abstract void WatchAndMonitor();
+
 }

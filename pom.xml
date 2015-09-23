@@ -7,6 +7,19 @@
     <groupId>io.honeyqa</groupId>
     <artifactId>honeyqa-worker</artifactId>
     <version>0.1-SNAPSHOT</version>
-
+<dependencies>
+    <dependency>
+        <groupId>com.rabbitmq</groupId>
+        <artifactId>amqp-client</artifactId>
+        <version>3.5.4</version>
+    </dependency>
+    <dependency>
+        <groupId>redis.clients</groupId>
+        <artifactId>jedis</artifactId>
+        <version>2.7.2</version>
+        <type>jar</type>
+        <scope>compile</scope>
+    </dependency>
+</dependencies>
 
 </project>
