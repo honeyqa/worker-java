@@ -1,5 +1,9 @@
 package io.honeyqa.sharding;
 
+import redis.clients.util.Hashing;
+import redis.clients.util.SafeEncoder;
+import redis.clients.util.ShardInfo;
+
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -22,21 +26,24 @@ public abstract class RedisSharding<R, S extends ShardInfo<R>> implements Shardi
         private Pattern tagPattern = null;
         public static final Pattern DEFAULT_KEY_TAG_PATTERN = Pattern.compile("\\{(.+?)\\}");
 
-        public Sharded(List<S> shards) {
+        public RedisSharding(List<S> shards) {
             this(shards, Hashing.MURMUR_HASH);
         }
 
-        public Sharded(List<S> shards, Hashing algo) {
+        public RedisSharding(List<S> shards, Hashing algo) {
+
             this.algo = algo;
             initialize(shards);
+
         }
 
-        public Sharded(List<S> shards, Pattern tagPattern) {
+        public RedisSharding(List<S> shards, Pattern tagPattern) {
+
             this(shards, Hashing.MURMUR_HASH, tagPattern);
 
         }
 
-        public Sharded(List<S> shards, Hashing algo, Pattern tagPattern) {
+        public RedisSharding(List<S> shards, Hashing algo, Pattern tagPattern) {
             this.algo = algo;
             this.tagPattern = tagPattern;
             initialize(shards);
@@ -46,14 +53,20 @@ public abstract class RedisSharding<R, S extends ShardInfo<R>> implements Shardi
             nodes = new TreeMap<Long, S>();
 
             for (int i = 0; i != shards.size(); ++i) {
+
                 final S shardInfo = shards.get(i);
+
                 if (shardInfo.getName() == null) for (int n = 0; n < 160 * shardInfo.getWeight(); n++) {
+
                     nodes.put(this.algo.hash("SHARD-" + i + "-NODE-" + n), shardInfo);
+
                 }
                 else for (int n = 0; n < 160 * shardInfo.getWeight(); n++) {
+
                     nodes.put(this.algo.hash(shardInfo.getName() + "*" + shardInfo.getWeight() + n), shardInfo);
+
                 }
-                resources.put(shardInfo, shardInfo.createResource());
+
             }
         }
 
@@ -66,11 +79,13 @@ public abstract class RedisSharding<R, S extends ShardInfo<R>> implements Shardi
         }
 
         public S getShardInfo(byte[] key) {
+
             SortedMap<Long, S> tail = nodes.tailMap(algo.hash(key));
             if (tail.isEmpty()) {
                 return nodes.get(nodes.firstKey());
             }
             return tail.get(tail.firstKey());
+
         }
 
         public S getShardInfo(String key) {
