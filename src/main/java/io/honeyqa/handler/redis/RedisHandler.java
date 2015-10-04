@@ -1,3 +1,4 @@
+/*
 package io.honeyqa.handler.redis;
 
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
@@ -15,6 +16,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class RedisHandler extends JedisTestBase {
+
     private static final String MASTER_NAME = "HoneyQAmaster";
 
     protected static HostAndPort master = HostAndPortUtil.getRedisServers().get(2);
@@ -197,3 +199,4 @@ public class RedisHandler extends JedisTestBase {
     }
 
 }
+*/

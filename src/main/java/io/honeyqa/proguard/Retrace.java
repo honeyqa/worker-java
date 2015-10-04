@@ -14,7 +14,7 @@ public class Retrace {
         LineNumberReader stackTraceReader = new LineNumberReader(new StringReader(stackTrace));
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PrintWriter decodedStackTraceReader = new PrintWriter(out);
-        ReTrace r = new ReTrace(ReTrace.STACK_TRACE_EXPRESSION, true, mappingFile);
+        ReTrace r = new ReTrace(ReTrace.STACK_TRACE_EXPRESSION, false, mappingFile);
         try {
             r.retrace(stackTraceReader, decodedStackTraceReader);
             stackTraceReader.close();
