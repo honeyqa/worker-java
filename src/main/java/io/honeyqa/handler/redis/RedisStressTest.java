@@ -1,6 +1,5 @@
 package io.honeyqa.handler.redis;
 
-
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -14,7 +13,6 @@ public abstract class RedisStressTest extends Assert {
             assertArrayEquals(expected.get(n), actual.get(n));
         }
     }
-
 
     protected void assertEquals(Set<byte[]> expected, Set<byte[]> actual) {
         assertEquals(expected.size(), actual.size());
