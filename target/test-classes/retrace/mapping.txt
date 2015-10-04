@@ -1,0 +1,80 @@
+rgc1015.withme.Content -> rgc1015.withme.Content:
+    rgc1015.withme.ParallaxListView lv -> e
+    android.widget.ImageView hv -> f
+    rgc1015.withme.DataClass dc -> a
+    java.lang.String color -> b
+    int month -> c
+    java.lang.String body -> d
+    android.graphics.Bitmap head -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    java.lang.String ReadTextAssets(java.lang.String) -> a
+    android.graphics.Bitmap ReadBitmapAssets(java.lang.String) -> b
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
+rgc1015.withme.Content$TopicAdapter -> rgc1015.withme.a:
+    android.content.Context mContext -> a
+    rgc1015.withme.Content this$0 -> b
+    int getCount() -> getCount
+    int getViewTypeCount() -> getViewTypeCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+rgc1015.withme.DataClass -> rgc1015.withme.b:
+    java.lang.String topic -> a
+    java.lang.String title -> b
+    java.lang.String writer -> c
+rgc1015.withme.Home -> rgc1015.withme.Home:
+    rgc1015.withme.ParallaxListView lv -> e
+    android.widget.ImageView hv -> f
+    java.util.ArrayList al -> a
+    java.util.ArrayList cl -> b
+    java.util.ArrayList dl -> c
+    java.util.ArrayList il -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
+rgc1015.withme.Home$1 -> rgc1015.withme.c:
+    rgc1015.withme.Home this$0 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+rgc1015.withme.Home$TopicAdapter -> rgc1015.withme.d:
+    android.content.Context mContext -> a
+    rgc1015.withme.Home this$0 -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+rgc1015.withme.Home$friendHolder -> rgc1015.withme.e:
+    android.widget.TextView topic -> a
+    android.widget.TextView title -> b
+    android.widget.TextView writer -> c
+    android.widget.ImageView icon -> d
+    android.widget.RelativeLayout wrap -> e
+rgc1015.withme.ParallaxListView -> rgc1015.withme.ParallaxListView:
+    android.widget.ImageView mImageView -> a
+    int mDrawableMaxHeight -> b
+    int mImageViewHeight -> c
+    int mDefaultImageViewHeight -> d
+    rgc1015.withme.ParallaxListView$OnOverScrollByListener scrollByListener -> e
+    rgc1015.withme.ParallaxListView$OnTouchEventListener touchListener -> f
+    void init(android.content.Context) -> a
+    void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
+    boolean overScrollBy(int,int,int,int,int,int,int,int,boolean) -> overScrollBy
+    void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
+    void onScrollChanged(int,int,int,int) -> onScrollChanged
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void setParallaxImageView(android.widget.ImageView) -> a
+    void setViewsBounds(double) -> a
+    android.widget.ImageView access$0(rgc1015.withme.ParallaxListView) -> a
+    int access$1(rgc1015.withme.ParallaxListView) -> b
+    int access$2(rgc1015.withme.ParallaxListView) -> c
+rgc1015.withme.ParallaxListView$OnOverScrollByListener -> rgc1015.withme.f:
+    rgc1015.withme.ParallaxListView this$0 -> a
+    boolean overScrollBy$30fc967d(int,boolean) -> a
+rgc1015.withme.ParallaxListView$OnTouchEventListener -> rgc1015.withme.g:
+    rgc1015.withme.ParallaxListView this$0 -> a
+    void onTouchEvent(android.view.MotionEvent) -> a
+rgc1015.withme.ParallaxListView$ResetAnimimation -> rgc1015.withme.h:
+    int targetHeight -> a
+    int originalHeight -> b
+    int extraHeight -> c
+    android.view.View mView -> d
+    void applyTransformation(float,android.view.animation.Transformation) -> applyTransformation

@@ -1,9 +1,8 @@
 package io.honeyqa.handler.rabbit;
 
-import java.io.IOException;
-import io.honeyqa.connector.ConnectionManager;
-import io.honeyqa.*;
 import com.rabbitmq.client.*;
+
+import java.io.IOException;
 
 public class RabbitHandler {
 
