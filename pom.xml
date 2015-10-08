@@ -7,6 +7,12 @@
     <artifactId>honeyqa-worker</artifactId>
     <version>0.1-SNAPSHOT</version>
     <dependencies>
+        <!-- atosl -->
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>4.2.0</version>
+        </dependency>
         <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
